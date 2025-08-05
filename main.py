@@ -20,10 +20,11 @@ from jwt_validator import create_jwt_validator
 
 # --- Authentication and Server Configuration ---
 
-# 1. Define authentication parameters
-AUTH_ISSUER = "https://api.asgardeo.io/t/sahan1001/oauth2/token"
-CLIENT_ID = "g5D2GfRNi_NoPs82k4U_OiwPl84a"  # This is the expected 'audience' for the JWT
-JWKS_URL = "https://api.asgardeo.io/t/sahan1001/oauth2/jwks"
+# 1. Define authentication parameters - Asgardeo Configuration
+# TODO: Replace 'your-tenant' with your actual Asgardeo tenant name
+AUTH_ISSUER = "https://api.asgardeo.io/t/your-tenant/oauth2/token"
+CLIENT_ID = "your-client-id-here"  # Replace with your Asgardeo OAuth2 client ID
+JWKS_URL = "https://api.asgardeo.io/t/your-tenant/oauth2/jwks"
 
 # Initialize JWT validator at startup
 jwt_validator = create_jwt_validator(
